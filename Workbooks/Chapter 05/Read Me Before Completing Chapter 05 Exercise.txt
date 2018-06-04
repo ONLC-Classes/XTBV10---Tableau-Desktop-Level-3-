@@ -1,0 +1,16 @@
+The files for Chapter 05 Exceeded GitHub's File Limitation.   
+
+AS a result, please do the following to complete the labs:
+
+STARTER:
+Open the CHAPTER 05 STARTER:
+Bring in the following Data Sources for the lab (ALL are found in this folder - just get one of each):
+  Custom Image (Easting Sushi).csv
+  DOHMH New York City Restaurant.csv
+  Shaq (NBA Shaq).csv
+  State (catsvdogs).csv
+  World's Busiest Airports.csv
+  
+  Complete labs as per insructions in your Business Intelligence Cookbook for Chapter 05.
+  
+    
