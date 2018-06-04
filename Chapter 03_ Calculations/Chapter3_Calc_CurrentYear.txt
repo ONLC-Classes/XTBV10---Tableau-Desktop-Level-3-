@@ -1,1 +1,0 @@
-DatePart('year',Today())
