@@ -1,0 +1,37 @@
+If [Select Period to Compare]= "Year over Year"
+THEN IF  Year([Inspection Date])=[Current Year]
+Then "Current Year"
+ELSEIF Year ([Inspection Date])=[Current Year] - 1
+Then "Previous Year"
+END
+
+ELSEIF [Select Period to Compare]="Current YTD over Previous YTD" 
+THEN If Year([Inspection Date])=[Current Year]
+AND [Inspection Date] <= Today()
+Then "Current YTD"
+ELSEIF (Year([Inspection Date])=[Current Year] -1)
+AND ([Inspection Date] <= DATEADD('year', -1, TODAY()))
+THEN "Previous YTD"
+END
+
+ELSEIF [Select Period to Compare]="Quarter over Quarter" 
+THEN IF DATEPART('quarter',[Inspection Date])=[Current Quarter]
+Then "Current Quarter"
+ELSEIF ([Current Quarter] > 1
+AND DATEPART('quarter',[Inspection Date]) = [Current Quarter] -1)
+OR ([Current Quarter] = 1 AND DATEPART('quarter', [Inspection Date])=4
+AND YEAR([Inspection Date])=[Current Year]-1)
+THEN "Previous Quarter"
+END
+
+ELSEIF [Select Period to Compare]="Month over Month" 
+THEN IF MONTH([Inspection Date])=[Current Month]
+Then "Current Month"
+ELSEIF ([Current Month] > 1
+AND MONTH ([Inspection Date]) = [Current Month] -1)
+OR ([Current Month]=1 AND MONTH([Inspection Date])=12
+AND YEAR ([Inspection Date]) = [Current Year]- 1)
+THEN "Previous Month"
+END
+
+END
