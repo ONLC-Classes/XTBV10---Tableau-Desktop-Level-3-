@@ -1,0 +1,9 @@
+IF  SUM([Percentage of households with pets]) >= 61
+THEN "> 60%"
+ELSEIF SUM([Percentage of households with pets]) >= 51
+THEN "51-60%"
+ELSEIF SUM([Percentage of households with pets]) >= 41
+THEN "41-50%"
+ELSEIF SUM([Percentage of households with pets]) >= 21
+THEN "21-40%"
+END
